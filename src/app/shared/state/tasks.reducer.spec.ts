@@ -31,8 +31,8 @@ describe('TasksReducer', () => {
       const action = tasksLoaded({ tasks: newState });
       const state = fromReducer.tasksReducer(initialState, action);
 
-      // expect(state).toEqual(newState);
-      // expect(state).not.toBe(newState);
+      expect(state).toEqual(newState);
+      expect(state).not.toBe(newState);
     });
   });
 });

@@ -8,6 +8,7 @@ import { TasksService } from './tasks.service';
 
 describe('TasksService', () => {
   let service: TasksService;
+  const TASKURL = 'http://localhost:3000/tasks';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -28,7 +29,7 @@ describe('TasksService', () => {
       service.add(taskPropsStub).subscribe(res => {
         expect(res).toEqual(taskPropsStub);
       });
-      const req = httpTestingController.expectOne('HTTP_ROUTE_GOES_HERE');
+      const req = httpTestingController.expectOne(`${TASKURL}`);
       expect(req.request.method).toEqual('POST');
       req.flush(taskPropsStub);
       httpTestingController.verify();
@@ -41,7 +42,7 @@ describe('TasksService', () => {
       service.getAll().subscribe(res => {
         expect(res).toEqual([]);
       });
-      const req = httpTestingController.expectOne('HTTP_ROUTE_GOES_HERE');
+      const req = httpTestingController.expectOne(`${TASKURL}`);
       expect(req.request.method).toEqual('GET');
       req.flush([]);
       httpTestingController.verify();
@@ -54,7 +55,7 @@ describe('TasksService', () => {
       service.getTasks().subscribe(res => {
         expect(res).toEqual([]);
       });
-      const req = httpTestingController.expectOne('HTTP_ROUTE_GOES_HERE');
+      const req = httpTestingController.expectOne(`${TASKURL}`);
       expect(req.request.method).toEqual('GET');
       req.flush([]);
       httpTestingController.verify();

@@ -34,6 +34,27 @@
       "label": "Chore #7",
       "description": "Mow Lawn",
       "category": "house"
+    },
+    {
+      "id": "BOh1B0",
+      "done": false,
+      "label": "adsa",
+      "description": "sadcasdc",
+      "category": "sdvcasdvc"
+    },
+    {
+      "id": "0F7cn6",
+      "done": false,
+      "label": "Chore #1001",
+      "description": "study GoLang Seriously",
+      "category": "Office"
+    },
+    {
+      "id": "GzOLml",
+      "done": false,
+      "label": "Chore #55",
+      "description": "Read More C++",
+      "category": "Dev"
     }
   ]
 }
