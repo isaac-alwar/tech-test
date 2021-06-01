@@ -1,0 +1,42 @@
+<div class="container">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>List of tasks</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content
+        *ngFor="let task of tasks"
+        (click)="onselect.emit(task)" >
+
+        <span>
+          <h3>ID: {{task.id}}</h3>
+        </span>
+
+        <span mat-line>
+          <span>Label:  {{ task.label }}</span>
+        </span>
+
+        <p mat-line>
+          {{ task.description }}
+
+          {{ task.category }}
+        </p>
+        <div class="box">
+            <mat-slide-toggle>
+              {{ task.done }}
+            </mat-slide-toggle>
+
+          <button mat-stroked-button color="warn"
+            *ngIf="!readonly"
+            mat-icon-button
+            (click)="delete.emit(task); $event.stopImmediatePropagation()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+
+  </mat-card-content>
+</mat-card>
+</div>
+
+

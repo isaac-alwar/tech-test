@@ -1,0 +1,52 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h3>
+        <span *ngIf="originalTask?.id; else prompt">
+          Editing {{ originalTask.label }}</span>
+        <ng-template #prompt>Create Book</ng-template>
+      </h3>
+      <span>{{ originalTask.label }}</span>
+        <ng-template #prompt>Add A Task</ng-template>
+    </mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="taskForm" #f="ngForm" (submit)="onSubmit(f.value)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Enter a Label" formControlName="label" type="text" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+         <input
+          matInput
+          placeholder="Description"
+          formControlName="description"
+          type="text"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Category"
+          formControlName="category"
+          type="text"
+        />
+      </mat-form-field>
+
+      <!-- TODO: Completed Button Implementation -->
+      <!-- <mat-form-field class="full-width" disabled>
+        <input
+          matInput
+          placeholder=Done
+          formControlName="done"
+          type="text"
+        />
+      </mat-form-field> -->
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="warning" type="submit" mat-button>Save</button>
+      <button mat-stroked-button color="warning" type="button" mat-button (click)="cancel.emit()">Cancel</button>
+      <button mat-stroked-button color="warning" type="button" mat-button (click)="taskDone.emit()" disabled>Done</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

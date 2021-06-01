@@ -1,0 +1,24 @@
+<div class="parent">
+
+  <div class="box">
+    <!-- <app-tasks-total [total]="total$ | async"> </app-tasks-total> -->
+
+    <app-tasks-list
+      [tasks]="tasks$ | async"
+      (onselect)="onSelect($event)"
+      (delete)="onDelete($event)"
+    >
+    </app-tasks-list>
+  </div>
+
+  <div class="box">
+    <app-task-detail
+
+      [task]="currentTask$ | async"
+      (save)="onSave($event)"
+      (cancel)="onCancel()"
+    >
+    </app-task-detail>
+    </div>
+
+</div>

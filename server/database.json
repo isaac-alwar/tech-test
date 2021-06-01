@@ -1,0 +1,39 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "label": "Kitchen Cleanup",
+      "description": "Clean my dirty kitchen",
+      "category": "house",
+      "done": false
+    },
+    {
+      "id": 2,
+      "label": "Taxes",
+      "description": "Start doing my taxes and contact my accountant jhon for advice",
+      "category": "bureaucracy",
+      "done": "22-10-2019"
+    },
+    {
+      "id": "7CZ6Qi",
+      "done": false,
+      "label": "Chore #3",
+      "description": "Wash Car",
+      "category": "house"
+    },
+    {
+      "id": "3VqQU-",
+      "done": false,
+      "label": "Chore #5",
+      "description": "Clean Shed",
+      "category": "Outdoors"
+    },
+    {
+      "id": "evKzaX",
+      "done": false,
+      "label": "Chore #7",
+      "description": "Mow Lawn",
+      "category": "house"
+    }
+  ]
+}
