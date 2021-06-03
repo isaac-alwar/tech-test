@@ -10,16 +10,23 @@
     {
       "id": 2,
       "label": "Taxes",
-      "description": "Start doing my taxes and contact my accountant jhon for advice",
+      "description": "Start doing my taxes and contact my accountant jon for advice",
       "category": "bureaucracy",
-      "done": "22-10-2019"
+      "done": "22-10-2019",
+      "searchkey": [
+        "Taxes",
+        "bureaucracy",
+        "22-10-2019",
+        "Start doing my taxes and contact my accountant jhon for advice",
+        2
+      ]
     },
     {
-      "id": "3VqQU-",
+      "id": "12tRya",
       "done": false,
-      "label": "Chore #5",
-      "description": "Clean Shed",
-      "category": "Outdoors"
+      "label": "sdvsvs",
+      "description": "svsvsv",
+      "category": "ertu7665745"
     }
   ]
 }
