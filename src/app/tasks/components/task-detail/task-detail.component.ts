@@ -16,13 +16,13 @@ export class TaskDetailComponent {
   taskForm = new FormGroup({
     label: new FormControl(''),
     description: new FormControl(''),
-    category: new FormControl('')
-    // done: new FormControl(false),
+    category: new FormControl(''),
+    done: new FormControl(false),
   });
 
   @Input() set task(task: Task) {
     this.taskForm.reset();
-    this.originalTask = undefined;
+    // this.originalTask!;
 
     if (task) {
       this.taskForm.setValue({

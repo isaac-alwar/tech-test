@@ -15,7 +15,7 @@ import { selectTaskCount } from 'src/app/shared/state/tasks.reducer';
 })
 export class TasksPageComponent implements OnInit {
   tasks$: Observable<Task[]>;
-  currentTask$: Observable<Task | null>;
+  currentTask$: Observable<Task>;
   total$: Observable<number>;
 
   constructor(private store: Store<State>) {

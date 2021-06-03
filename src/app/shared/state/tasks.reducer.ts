@@ -5,7 +5,7 @@ import { Task } from 'src/app/shared/models';
 import { TasksPageActions, TasksApiActions } from '../../tasks/actions';
 
 export interface State extends EntityState<Task> {
-  activeTaskId: string | null;
+  activeTaskId: number | null;
 }
 
 export const adapter: EntityAdapter<Task> = createEntityAdapter<Task>();
@@ -19,7 +19,7 @@ export const tasksReducer = createReducer(
   on(TasksPageActions.clearSelectedTask, TasksPageActions.enter, state => {
     return {
       ...state,
-      activeTaskId: null
+      activeTaskId: undefined
     };
   }),
   on(TasksPageActions.selectTask, (state, action) => {
