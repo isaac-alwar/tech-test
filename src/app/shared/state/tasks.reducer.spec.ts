@@ -1,6 +1,6 @@
+import { tasksLoaded } from 'src/app/tasks/actions/tasks-api.actions';
 import * as fromReducer from './tasks.reducer';
 import { Task } from '../models';
-import { tasksLoaded } from 'src/app/tasks/actions/tasks-api.actions';
 
 describe('TasksReducer', () => {
   describe('unknown action', () => {

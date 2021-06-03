@@ -19,7 +19,7 @@ export const tasksReducer = createReducer(
   on(TasksPageActions.clearSelectedTask, TasksPageActions.enter, state => {
     return {
       ...state,
-      activeTaskId: undefined
+      activeTaskId: null
     };
   }),
   on(TasksPageActions.selectTask, (state, action) => {
@@ -58,11 +58,11 @@ export function reducer(state: State | undefined, action: Action) {
   return tasksReducer(state, action);
 }
 
-export const { selectAll, selectEntities, selectTotal, selectIds } = adapter.getSelectors();
-export const selectTaskIds = selectIds;
+export const { selectAll, selectEntities } = adapter.getSelectors();
+// export const selectTaskIds = selectIds;
 export const selectTaskEntities = selectEntities;
 export const selectAllTasks = selectAll;
-export const selectTaskCount = selectTotal;
+// export const selectTaskCount = selectTotal;
 export const selectActiveTaskId = (state: State) => state.activeTaskId;
 export const selectActiveTask = createSelector(
   selectEntities,

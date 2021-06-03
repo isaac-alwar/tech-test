@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
 import { Task, TaskProps } from 'src/app/shared/models/task.model';
 import { select, Store } from '@ngrx/store';
 import { State } from 'src/app/shared/state';
-import { selectTaskCount } from 'src/app/shared/state/tasks.reducer';
 
 @Component({
   selector: 'app-tasks',
@@ -62,12 +61,12 @@ export class TasksPageComponent implements OnInit {
     this.store.dispatch(TasksPageActions.deleteTask({ taskId: task.id }));
   }
 
-  onDone(task: Task) {
-    if (task.done === 'false') {
-      task.done = Date.now().toString();
-      this.store.dispatch(TasksPageActions.completeTask({taskId: task.id, changes: task}))
-    }
-  }
+  // onDone(task: Task) {
+  //   if (task.done === 'false') {
+  //     task.done = Date.now().toString();
+  //     this.store.dispatch(TasksPageActions.completeTask({taskId: task.id, changes: task}));
+  //   }
+  // }
 }
 
 

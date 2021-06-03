@@ -21,7 +21,7 @@ import { reducers } from './shared/state';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([

@@ -10,19 +10,19 @@ import { Task } from 'src/app/shared/models';
 export class TaskDetailComponent {
   originalTask: Task | undefined;
   @Output() save = new EventEmitter();
-  taskDone = new EventEmitter();
+  @Input() taskDone = new EventEmitter();
   @Output() cancel = new EventEmitter();
 
   taskForm = new FormGroup({
     label: new FormControl(''),
     description: new FormControl(''),
     category: new FormControl(''),
-    done: new FormControl(false),
+    // done: new FormControl(''),
   });
 
   @Input() set task(task: Task) {
     this.taskForm.reset();
-    // this.originalTask!;
+    this.originalTask = undefined;
 
     if (task) {
       this.taskForm.setValue({
